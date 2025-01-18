@@ -42,7 +42,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Build the application
-      run: dotnet publish --configuration Release -r ${{ matrix.runtime }}
+      run: dotnet publish --configuration Release -r ${{ matrix.runtime }} --self-contained
 
     - name: Move artifacts
       shell: pwsh
